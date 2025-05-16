@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.CentreTriDialogController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="centreTable" layoutX="-12.0" layoutY="107.0" prefHeight="298.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="nomCentre" prefWidth="174.0" text="centre de tri" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.29797979797979796" layoutX="1.0" layoutY="-1.0" prefHeight="298.0" prefWidth="417.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-1.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="127.0">
+                           <children>
+                              <TableView fx:id="poubelleTable" layoutX="-157.0" prefHeight="296.0" prefWidth="278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                   <TableColumn fx:id="idColumn" prefWidth="40.0" text="ID" />
+                                   <TableColumn fx:id="etatColumn" prefWidth="75.0" text="État" />
+       							   <TableColumn fx:id="typeColumn" prefWidth="40.0" text="Type" />
+                                   <TableColumn fx:id="emplacementColumn" prefWidth="75.0" text="Emplacement" />
+                                 
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="296.0" prefWidth="90.0">
+                           <children>
+                              <HBox alignment="BOTTOM_RIGHT" layoutX="-1.0" prefHeight="276.0" prefWidth="259.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                  <Button mnemonicParsing="false" onAction="#handleNewPoubelle" text="New..." />
+                                    <Button mnemonicParsing="false" onAction="#handleDeletePoubelle" style="-fx-background-color: red;" text="Delete" />
+                                    <Button onAction="#handleClose" text="Deconnexion" />
+                                    <Button mnemonicParsing="false" onAction="#handleHistorique" text="Historique" />
+                                    <Button mnemonicParsing="false" onAction="#handleCollecterPoubelle" text="Collecter"/>
+                                    <Button fx:id="collecteGeneraleButton" onAction="#handleCollecteGenerale" text="Collecte Générale" />
+                                    <Button text="Stats" onAction="#handleStatistiques" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

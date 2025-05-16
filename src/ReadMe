@@ -1,0 +1,5 @@
+ReadMe :
+
+Avant de pouvoir lancer le Main (et les classes test) il faut créer la base de donnée décrite dans le fichier CentreDeTri.sql du package com.monprojet.DAO
+
+Quand on installe le mysql-connector il faut d'abord désinstaller le JRE. Tout ça dans le build path configurations

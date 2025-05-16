@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="ch.makery.address.view.UserInfoDialogController">
+    <children>
+        <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Section Nom -->
+            <HBox spacing="10">
+                <Label text="Nom:" />
+                <Label fx:id="nameLabel" text="Nom de l'utilisateur" />
+            </HBox>
+
+            <!-- Section ID -->
+            <HBox spacing="10">
+                <Label text="ID:" />
+                <Label fx:id="idLabel" text="ID de l'utilisateur" />
+            </HBox>
+
+            <!-- Section Points de fidélité -->
+            <HBox spacing="10">
+                <Label text="Points de fidélité:" />
+                <Label fx:id="pointsLabel" text="0" />
+            </HBox>
+			<TextArea fx:id="bonAchatTextArea" layoutX="14.0" layoutY="200.0" prefHeight="150.0" prefWidth="300.0" editable="false" />
+            <!-- Section Boutons 1 à 4 -->
+            <HBox spacing="20">
+                <Button fx:id="button1" onAction="#handleButton1" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="0" />
+                <Button fx:id="button2" onAction="#handleButton2" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="0" />
+                <Button fx:id="button3" onAction="#handleButton3" style="-fx-background-color: #FFEB3B; -fx-text-fill: black;" text="0" />
+                <Button fx:id="button4" onAction="#handleButton4" style="-fx-background-color: #F44336; -fx-text-fill: white;" text="0" />
+            </HBox>
+            
+            <HBox  spacing="20">
+	            <Label text="ID Poubelle:" />
+	            <TextField fx:id="poubelleIdField" promptText="Entrez l'ID de la poubelle" />
+        	</HBox>
+        	
+        	<HBox  spacing="20">
+	            <Label text="ID Commerce:" />
+	            <TextField fx:id="commerceIdField" promptText="Entrez l'ID du Commerce" />
+	            <Label text="Nombre de points a Convertir:" />
+                <TextField fx:id="nbPointsField" promptText="Entrez le nombre de points"/>
+	            <Button fx:id="buttonConvertir" onAction="#handleConvertir" style="-fx-background-color: #F44336; -fx-text-fill: white;" text="Convertir points"  />
+        	</HBox>
+
+
+             <HBox spacing="20" alignment="CENTER">
+                <Button layoutX="20" layoutY="250" onAction="#handleDeposerCorbeille" text="Déposer corbeille" />
+                <Button layoutX="20" layoutY="250" onAction="#handleClose" text="Deconnexion" />
+                <Button layoutX="20" layoutY="250" onAction="#handleAnnuler" text="Annuler" />
+            </HBox>
+            </VBox>
+    </children>
+</AnchorPane>
